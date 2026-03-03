@@ -66,7 +66,7 @@ const WheelOfFortune = ({ names }) => {
               }}
             >
               <div className="wheel-text-wrapper">
-                <div className="wheel-text" style={{ transform: `rotate(${90 - segmentAngle / 2}deg)` }}>
+                <div className="wheel-text" style={{ transform: `translate(50px, -75px) rotate(${90 - segmentAngle / 2}deg)` }}>
                   {name}
                 </div>
               </div>
