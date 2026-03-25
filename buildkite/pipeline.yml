@@ -1,0 +1,19 @@
+steps:
+  - label: ":node: Install dependencies"
+    command: npm ci
+    agents:
+      queue: self-hosted-test
+
+  - wait
+
+  - label: ":jest: Run tests"
+    command: npm test
+    agents:
+      queue: self-hosted-test
+
+  - wait
+
+  - label: ":package: Build"
+    command: npm run build
+    agents:
+      queue: self-hosted-test
